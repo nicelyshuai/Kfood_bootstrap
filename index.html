@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kfood</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        .banners {
+            background-image: linear-gradient(57deg, rgba(192, 192, 192, 0.526), rgba(192, 192, 192, 0.46)), url(https://paldo.us/wp-content/uploads/2025/07/korean-foods-blog-1024x720.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+            width: 100%;
+            height: 750px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-contents {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+        }
+    </style>
+</head>
+
+<body class="bg-secondary">
+
+    <nav class="navbar navbar bg-secondary navbar-expand-lg fixed-top justify-content-end" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Kfood</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#banner">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our-menu">Our Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#popular-choices">Popular Choices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="banner" class="banners">
+        <div class="container">
+            <div class="row">
+                <div class="banner-contents">
+                    <h1 class="text-black text-center">Welcome to Our Kfood</h1>
+                    <h5 class="bg-warning text-black text-center fst-italic py-2 rounded-2s m-auto my-3 w-25">
+                        Opening Hours 9:30 a.m - 6:30 p.m</h5>
+                    <p class=" text-black text-center  rounded-2 m-auto"><a href="tel:+9591234567890"
+                            class="btn btn-warning fst-italic fw-semibold">
+                            <i class="bi bi-telephone-fill"></i> Call Now
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h2 class="text-center text-white my-5" id="our-menu">Our Menu</h2>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center row-gap-lg-5 row-gap-md-3 row-gap-sm-3 row-gap-3 column-gap-lg-5">
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCdwKpFBIK0bg7R2UbkOnDYp9Vrzqm-_UG8w&s"
+                    class="card-img-top mt-3" alt="kimbap">
+                <div class="card-body">
+                    <h5 class="card-title">Kimbap</h5>
+                    <p class="card-text">3000 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqm318n6KEaIP0o8AdaX4Mq2I9OKREPlSUCQ&s"
+                    class="card-img-top mt-3" alt="fried-rice">
+                <div class="card-body">
+                    <h5 class="card-title">Kimchi Fried Rice</h5>
+                    <p class="card-text">4500 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://image.8dogam.com/resized/product/asset/v1/upload/7071f80401b9400495396d22659abfd9.jpeg?type=big&res=3x&ext=jpg"
+                    class="card-img-top mt-3" alt="fish-cake">
+                <div class="card-body">
+                    <h5 class="card-title">Fish Cake</h5>
+                    <p class="card-text">1200 Ks per 1 stick</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjgdDVM81Bflw4HnETHd64PZs0jjfbjrXs3A&s"
+                    class="card-img-top mt-3" alt="spicy-noodles" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Spicy Noodles</h5>
+                    <p class="card-text">4500 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://i0.wp.com/seonkyounglongest.com/wp-content/uploads/2019/09/Jjamppong-12.jpg?fit=1500%2C844&ssl=1"
+                    class="card-img-top mt-3" alt="soup" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Seafood Noodle Soup</h5>
+                    <p class="card-text">15000 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://thefoodietakesflight.com/wp-content/uploads/2021/01/Jjajangmyeon-vegan-black-bean-noodles-18-796x1024.png"
+                    class="card-img-top mt-3" alt="black-bean-noodles" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Black Bean Noodles</h5>
+                    <p class="card-text">4000 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://www.asiamarket.ie/media/wysiwyg/recipes/L-Recipe-Slide-Spicy-Tteokbokki-_Topokki_-.jpg"
+                    class="card-img-top mt-3" alt="tteokbokki" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Tteokbokki</h5>
+                    <p class="card-text">3000 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/img/recipes/33/22/02/picYkVwua.jpg"
+                    class="card-img-top mt-3" alt="egg-roll" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Egg roll</h5>
+                    <p class="card-text">3500 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://dawayo.de/wp-content/uploads/2023/01/2776F53E57CE8F861F.jpeg"
+                    class="card-img-top mt-3" alt="rice-punch" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Rice Punch</h5>
+                    <p class="card-text">2500 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12 col-lg-4 col-md-5 col-sm-6" style="width: 18rem;">
+                <img src="https://www.koryomart.co.kr/cdn/shop/files/Lotte_Chum_Churum_Original_1.png?v=1744160552s"
+                    class="card-img-top mt-3" alt="soju" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Soju</h5>
+                    <p class="card-text">5000 Ks</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        data-bs-whatever="@mdo">Order Now</button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Order Details</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="menus" class="col-form-label">Recipient:</label>
+
+                                            <select name="menus[]" id="menus" class="form-control" multiple>
+                                                <option value="" selected disabled>Choose Your Items</option>
+                                                <option value="kimbap">Kimbap</option>
+                                                <option value="kimchi">Kimchi Fried Rice</option>
+                                                <option value="fish-cake">Fish Cake</option>
+                                                <option value="spicy">Spicy Noodles</option>
+                                                <option value="seadfood-soup">Seafood Noodle Soup</option>
+                                                <option value="bean-noodles">Black Bean Noodles</option>
+                                                <option value="tteokbokki">Tteokbokki</option>
+                                                <option value="egg-roll">Egg roll</option>
+                                                <option value="rice-punch">Rice Punch</option>
+                                                <option value="soju">Soju</option>
+                                            </select>
+                                            <!-- <input type="text" class="form-control" id="recipient-name"> -->
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" id="message-text"
+                                                placeholder="Enter your address and note"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Order</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <h2 id="popular-choices" class="text-white text-center my-5">Popular Choices</h2>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://recipeguru.org/wp-content/uploads/2024/05/Tteokbokki-recipe.jpg"
+                    class="d-block w-75 mx-auto" alt="tteokbokki" style="height: 700px;">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i0.wp.com/seonkyounglongest.com/wp-content/uploads/2019/09/Jjamppong-12.jpg?fit=1500%2C844&ssl=1"
+                    class="d-block w-75 mx-auto" alt="seadfood-soup" style="height: 700px;">
+            </div>
+            <div class="carousel-item">
+                <img src="https://static.vecteezy.com/system/resources/previews/004/851/810/large_2x/dried-korean-spicy-instant-noodles-with-fried-egg-free-photo.jpg"
+                    class="d-block w-75 mx-auto" alt="spicy-noodles" style="height: 700px;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <form action="" class="my-5 w-50 m-auto" id="contact-us">
+        <h2 class="text-white text-center">Contact Us</h2>
+        <label for="name" class="form-label text-white">Name:</label>
+        <div class="input-group">
+            <i class="bi bi-person-fill input-group-text"></i>
+            <input type="text" class="form-control">
+        </div>
+
+        <label for="message" class="form-label text-white">Message:</label>
+        <div class="input-group">
+            <i class="bi bi-chat-right-dots-fill input-group-text"></i>
+            <textarea name="message" id="message" class="form-control"
+                placeholder="Enter your suggestion..."></textarea>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <i class="bi bi-send-fill p-3"></i>Send Message
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">Feedback</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Thank you for your suggestion.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="copyright">
+        <p class="copyrighttext bg-secondary text-white text-center">&copy;2025 Kfood. All Rights Reserved.</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
